@@ -5,3 +5,5 @@ DESeq2, limma and edgeR are the most popular tools for differential expression a
 I developed these codes and tested on small example files, and working well. Its very similar to R codes, in future I will use these code for my data analysis.
 
 In past I also used Python and R in R markdown by using reticulate. I found rpy2 based Python and R integration is better and easy. I also developed Python codes for survival analysis. I will use these codes for my future projects. It's just prototype of codes, I have to work more on GSEA and other parts.
+
+I also make python code (prototype) for the GSEA analysis and GSEA, volcano and heatmap plots
