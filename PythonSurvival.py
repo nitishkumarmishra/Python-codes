@@ -2,7 +2,7 @@
 """
 Created on Tue Dec 17 22:36:34 2019
 
-@author: nitis
+@author: nitish
 """
 
 from sksurv.datasets import load_veterans_lung_cancer
