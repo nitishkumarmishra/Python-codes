@@ -1,0 +1,50 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute code within the notebook, the results appear beneath the code. 
+
+Try executing this chunk by clicking the *Run* button within the chunk or by placing your cursor inside it and pressing *Ctrl+Shift+Enter*. 
+
+```{r}
+plot(cars)
+```
+
+
+```{r}
+library(reticulate)
+setwd("F:/OneDrive - University of Nebraska Medical Center/Python")
+use_python('C:/Users/nitish.mishra/AppData/Local/Continuum/anaconda3/python')
+Sys.which("python")
+```
+
+```{python, engine.path='C:/Users/nitish.mishra/AppData/Local/Continuum/anaconda3/python'}
+print('hello')
+import sys
+print(sys.version)
+```
+
+
+```{python, engine.path='C:/Users/nitish.mishra/AppData/Local/Continuum/anaconda3/python'}
+import pandas as pd
+flights = pd.read_csv("flights.csv", low_memory=False)
+flights = flights[flights['DESTINATION_AIRPORT'] == "ORD"]
+flights = flights[['AIRLINE', 'DEPARTURE_DELAY', 'ARRIVAL_DELAY']]
+flights = flights.dropna()
+print(flights.head())
+```
+
+```{r}
+library(ggplot2)
+ggplot(py$flights, aes(AIRLINE, ARRIVAL_DELAY)) + geom_point() + geom_jitter()
+flights <- py$flights 
+head(flights)
+```
+
+```{r}
+ft <- read.csv("flights.csv")
+```
+
+
+
